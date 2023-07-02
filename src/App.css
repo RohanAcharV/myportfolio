@@ -1,38 +1,284 @@
-.App {
-  text-align: center;
+/* Navigation component */
+#navigation{
+  background-color: black;
+  /* color: white; */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+#navigation ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  height:8vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#navigation li{
+  margin-right:10vw;
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: bolder;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#navigation li a{
+  text-decoration: none;
+  color:white;
+}
+#navigation li a:hover{
+  text-decoration: none;
+  color:#03fc03;
+}
+@media (max-width: 768px) {
+  #navigation ul{
+    display: flex;
+    justify-content: center ;
+    text-align: center;
+  }
+  #navigation li{
+    margin: auto;
+    font-size: 1rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+/* About component  */
+
+#about{
+  width:90vw;
+  margin: auto;
+  margin-top: 5vh;
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#about #info{
+  display: flex;
+  height: 60vh;
+  /* border: 1px solid black; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#about #det{
+  margin-top: 10vh;
+  text-align: center;
+}
+
+#about #det h1{
+  font-size: 2.5rem;
+}
+#about #det h1 span{
+  font-size: 3rem;
+  color: #03fc03;
+}
+
+#about #det h2{
+  font-size: 2rem;
+  padding: 0 5vw;
+}
+
+#about #info #image{
+  border-radius: 100vh;
+  background: url(images/profile.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position-x: center;
+  flex: 0 0 40%;
+  /* width:30%; */
+}
+
+#resume{
+  margin: 6vh 0;
+  width: 40vw;
+  border: none;
+  background: none;
+  color:#03fc03;
+  height:4vh;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+#resume:hover{
+  color: white;
+}
+
+footer #contact{
+  margin-top: 2.5vh;
+  border-top: 1px solid white;
+  border-bottom: none;
+  width: 90%;
+  margin:0 auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+footer #contact h3,h2{
+  margin-right: 5vw;
+  font-size: 1.5rem;
+}
+
+footer #contact h3 span{
+  color: #03fc03;
+}
+
+@media (max-width: 1000px) {
+  #about #det h1 {
+    font-size: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+  #about #det h1 span {
+    font-size: 2rem;
+    color: #03fc03;
   }
+  #about #det h2 {
+    font-size: 1.5rem;
+    padding: 0 5vw;
+  }
+  footer #contact h3,
+  footer #contact h2 {
+    margin-right: 5vw;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    #resume {
+      margin: 2vh auto;
+    }
+    #about #det h1 {
+      font-size: 1.5rem;
+    }
+    #about #det h1 span {
+      font-size: 2rem;
+      color: #03fc03;
+    }
+    #about #det h2 {
+      font-size: 1.5rem;
+      padding: 0 5vw;
+    }
+    #about {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+    #info {
+      display: flex;
+      flex-direction: column;
+      min-height: 90vh;
+      overflow-y: auto;
+    }
+    #info #image {
+      min-height: 50vh;
+    }
+    footer #contact {
+      flex-direction: column;
+    }
+    footer #contact h3,
+    footer #contact h2 {
+      margin-top: 1vh;
+    }
+    @media (max-width: 375px) {
+      #info {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+    }
+  }
+}
+
+/* Skills page  */
+
+#details{
+  width: 90vw;
+  margin: auto;
+  color: white;
+}
+.det h1{
+  font-size: 2.5rem;
+}
+.edu{
+  margin-bottom: 2vh;
+  border: 1px solid white;
+  border-left: 10px solid #03fc03;
+
+}
+.edu ul{
+  list-style-type: none;
+}
+.edu ul li{
+  font-size: 1.3rem;
+}
+.edu .deg{
+  font-weight: bolder;
+  color: #03fc03;
+  font-size: 1.5rem;
+}
+
+#skills{
+  margin-top: 5vh;
+}
+
+#certificates .edu .cert_img img{
+  width: 30vw;
+  height: auto;
+  margin:5vh 10vw;
+}
+
+#certificates .edu {
+  display: flex;
+}
+
+#certificates .edu .cert_det{
+  margin-top: auto;
+}
+
+@media (max-width: 1000px) {
+#certificates .edu{
+  flex-direction: column;
+  text-align: center;
+}
+#certificates .edu .cert_img img{
+  width:80vw;
+  height: auto;
+  margin: 5vh auto;
+}
+}
+
+#projects{
+  width: 90vw;
+  margin: auto;
+  color: white;
+}
+
+.proj{
+  margin-bottom: 2vh;
+  border: 1px solid white;
+  border-left: 10px solid #03fc03;
+  padding: 2vh 5vw;
+  font-size: 1.5rem;
+}
+
+.proj .p_tit{
+  font-weight: bolder;
+  color: #03fc03;
+  font-size: 2rem;
+}
+
+.githublink{
+  text-decoration: none;
+  background-color: #03fc03;
+  border-radius: 10px;
+  color: black;
+  padding: 1vh 1vw;
+  display: block;
+  text-align: center;
+  margin-top: 1vh;
+}
+.projectlink{
+  text-decoration: none;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  padding: 1vh 1vw;
+  display: block;
+  text-align: center;
+  margin-top: 1vh;
 }
