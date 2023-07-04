@@ -53,7 +53,7 @@
 
 #about #info{
   display: flex;
-  height: 60vh;
+  min-height: 60vh;
   /* border: 1px solid black; */
 }
 
@@ -87,7 +87,8 @@
 
 #resume{
   margin: 6vh 0;
-  width: 40vw;
+  width: auto;
+  padding: 1vh 1vw;
   border: none;
   background: none;
   color:#03fc03;
@@ -95,6 +96,8 @@
   font-size: 1rem;
   cursor: pointer;
   font-weight: bolder;
+  border: 1px solid #03fc03;
+  border-radius: 1vw;
 }
 
 #resume:hover{
@@ -161,8 +164,6 @@ footer #contact h3 span{
     #info {
       display: flex;
       flex-direction: column;
-      min-height: 90vh;
-      overflow-y: auto;
     }
     #info #image {
       min-height: 50vh;
