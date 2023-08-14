@@ -10,7 +10,7 @@ function About(){
 
     function downcv(){
         const link = document.createElement('a');
-        link.href = 'https://drive.google.com/file/d/1_6LYBc2AT82CrgSjXmWvbCbawS0Ee_W_/view?usp=sharing'; 
+        link.href = 'https://drive.google.com/file/d/1lBKmx8g6Nv6yuMTqnh9YOGA9XU0xQpiN/view?usp=sharing'; 
         link.download = 'cv.pdf'; 
         document.body.appendChild(link);
         link.click();
